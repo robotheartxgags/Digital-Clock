@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box{
+    width: 300px;
+height: 100px;
+background-color: lightgreen;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+color: black;
+
+}
+.Clock{ 
+    gap: 30px;
+ color: black;
+display: flex;
+justify-content: center;
+align-items: center; 
+
+}
+.Date{
+margin-top: 20px;
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="Clock">
+            <div id="hou"></div> :
+            <div id="sec"></div> :
+            <div id="min"></div> 
+            <div id="am"></div> 
+            </div>
+        <div  id="date" class="Date">
+        </div>
+            </div>
+
+
+
+
+            <script>
+
+
+
+
+let hour = document.getElementById("hou")
+let second = document.getElementById("min")
+let min = document.getElementById("sec")
+let pm = document.getElementById("PM")
+
+let getdate = new Date ()
+date.innerText = getdate.toDateString();
+
+
+function clock (){
+let time = new Date ();
+hour.innerText = time.getHours ();
+min.innerText = time.getMinutes();
+second.innerText = time.getSeconds();
+
+let apm = hour >= 12 ? "PM" : "AM"
+    am.innerText = apm
+
+
+
+
+}
+
+setInterval(()=>{
+
+    clock();
+
+
+},1000)
+
+
+            </script>
+</body>
+</html>
